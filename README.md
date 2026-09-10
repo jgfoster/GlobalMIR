@@ -3,7 +3,9 @@
 A Flutter web application for rating the twelve Global MIR domains and deriving
 the global MIR score plus the straight sum of domain ratings.
 
-**Live site: https://jgfoster.github.io/GlobalMIR/**
+[![Deploy](https://github.com/jgfoster/GlobalMIR/actions/workflows/deploy.yml/badge.svg)](https://github.com/jgfoster/GlobalMIR/actions/workflows/deploy.yml)
+
+### [Open the calculator → jgfoster.github.io/GlobalMIR](https://jgfoster.github.io/GlobalMIR/)
 
 > A reference aid for qualified clinicians and researchers. Calculated scores
 > must be re-checked and should not be used alone to guide patient care, nor
@@ -69,7 +71,7 @@ flutter build web --release    # output in build/web
 Every push to `main` triggers `.github/workflows/deploy.yml`, which runs
 `flutter analyze` and `flutter test`, builds with
 `--base-href /GlobalMIR/` (project pages are not served from the domain root),
-and publishes `build/web` to GitHub Pages. A failing test blocks the deploy.
+and publishes `build/web` to [GitHub Pages](https://jgfoster.github.io/GlobalMIR/). A failing test blocks the deploy.
 The Pages source is set to *GitHub Actions*; nothing built is committed, so the
 site cannot drift from the source. A deploy can also be started by hand from
 the Actions tab.
